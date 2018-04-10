@@ -97,7 +97,7 @@ public class ApplicationListener {
 //		restTemplate = new RestTemplate();
 
 		try {
-        User user = restTemplate.getForObject("http://springbootmicroservice:8081/api/get-by-email?email=z@fromlistener.com", User .class);
+        User user = restTemplate.getForObject("http://springbootmicroservice:9191/api/get-by-email?email=z@fromlistener.com", User .class);
         log.info("Microservice executed: "+user.getName());
 		}//try
 		catch(Exception e)
