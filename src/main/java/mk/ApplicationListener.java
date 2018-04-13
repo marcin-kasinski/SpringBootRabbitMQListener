@@ -21,6 +21,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.integration.annotation.InboundChannelAdapter;
 import org.springframework.integration.annotation.Poller;
 import org.springframework.integration.core.MessageSource;
+import org.springframework.messaging.handler.annotation.Headers;
 import org.springframework.messaging.support.GenericMessage;
 import org.springframework.web.client.RestTemplate;
 
@@ -62,9 +63,16 @@ public class ApplicationListener {
 	}
 
 	 @StreamListener(WorkUnitsSink.CHANNEL_NAME)
-	public void processOrder(WorkUnit order) {
+	public void processOrder(WorkUnit order, @Headers Map<String, String> headers) {
 
 
+			log.info("headers: ");
+
+		 for (Map.Entry<String, String> entry : headers.entrySet())
+		 {
+			 log.info(entry.getKey() + "/" + entry.getValue());
+		 }
+		 
 //			log.info("SpanTraceId: " + order.getSpanTraceId());
 
 /*
