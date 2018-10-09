@@ -10,7 +10,7 @@ RUN touch /usr/src/myapp/logs/application.log
 ########################################## starting Logstash  ##########################################
 
 # install Filebeat
-ENV FILEBEAT_VERSION=filebeat-5.5.2-amd64.deb
+ENV FILEBEAT_VERSION=filebeat-6.4.2-amd64.deb
 RUN curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/${FILEBEAT_VERSION}
 
 #ADD ${FILEBEAT_VERSION} /${FILEBEAT_VERSION}
