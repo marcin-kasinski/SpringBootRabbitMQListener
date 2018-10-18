@@ -22,9 +22,12 @@ spring:
         port:5672
     zipkin:
         baseUrl: http://springbootzipkin:7777
+        sender:
+            type: web
     sleuth:
         sampler:
             percentage: 1
+            probability: 1
     cloud:
         stream:
             defaultBinder: rabbit1        
