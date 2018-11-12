@@ -9,7 +9,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.5.RELEASE</version>
+		<version>2.1.0.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	
@@ -30,7 +30,7 @@ Dalston.SR3
  		
   		<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
 <!-- 		<spring-boot-version>1.5.10.RELEASE</spring-boot-version> --> 
-  		<spring-boot-version>2.0.5.RELEASE</spring-boot-version>
+  		<spring-boot-version>2.1.0.RELEASE</spring-boot-version>
  		<start-class>mk.ApplicationListener</start-class>
 	</properties>
 
@@ -74,16 +74,7 @@ Dalston.SR3
       </executions>
     </plugin>					
  -->
-<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
 
-				<configuration>
-				<includes>
-             <include>src/main/java/**/*.java</include>
-        
-        </includes>
-				</configuration>
-			</plugin>
 
 
 
